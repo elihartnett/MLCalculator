@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		62E22A5B2921337D005313BB /* MLCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A5A2921337D005313BB /* MLCalculatorApp.swift */; };
-		62E22A5D2921337D005313BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A5C2921337D005313BB /* ContentView.swift */; };
 		62E22A5F2921337E005313BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E22A5E2921337E005313BB /* Assets.xcassets */; };
 		62E22A632921337E005313BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E22A622921337E005313BB /* Preview Assets.xcassets */; };
+		62E22A6C292133D3005313BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A5C2921337D005313BB /* ContentView.swift */; };
+		62E22A6E2921341C005313BB /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A6D2921341C005313BB /* CanvasView.swift */; };
+		62E22A7029213446005313BB /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A6F29213446005313BB /* Line.swift */; };
+		62E22A7229213474005313BB /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A7129213474005313BB /* CalculatorModel.swift */; };
+		62E22A7729213831005313BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A7629213831005313BB /* Extensions.swift */; };
+		62E22A7929215B6B005313BB /* CharacterClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 62E22A7829215B6B005313BB /* CharacterClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		62E22A5E2921337E005313BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62E22A602921337E005313BB /* MLCalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MLCalculator.entitlements; sourceTree = "<group>"; };
 		62E22A622921337E005313BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62E22A6D2921341C005313BB /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		62E22A6F29213446005313BB /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		62E22A7129213474005313BB /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		62E22A7629213831005313BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		62E22A7829215B6B005313BB /* CharacterClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CharacterClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				62E22A5A2921337D005313BB /* MLCalculatorApp.swift */,
-				62E22A5C2921337D005313BB /* ContentView.swift */,
+				62E22A6A2921339D005313BB /* Views */,
+				62E22A6B292133A4005313BB /* View Models */,
+				62E22A6929213395005313BB /* Models */,
+				62E22A7529213827005313BB /* Helpers */,
 				62E22A5E2921337E005313BB /* Assets.xcassets */,
 				62E22A602921337E005313BB /* MLCalculator.entitlements */,
 				62E22A612921337E005313BB /* Preview Content */,
@@ -67,6 +80,40 @@
 				62E22A622921337E005313BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62E22A6929213395005313BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62E22A7829215B6B005313BB /* CharacterClassifier.mlmodel */,
+				62E22A6F29213446005313BB /* Line.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		62E22A6A2921339D005313BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62E22A5C2921337D005313BB /* ContentView.swift */,
+				62E22A6D2921341C005313BB /* CanvasView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62E22A6B292133A4005313BB /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				62E22A7129213474005313BB /* CalculatorModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		62E22A7529213827005313BB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62E22A7629213831005313BB /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E22A5D2921337D005313BB /* ContentView.swift in Sources */,
+				62E22A6C292133D3005313BB /* ContentView.swift in Sources */,
+				62E22A7229213474005313BB /* CalculatorModel.swift in Sources */,
+				62E22A7029213446005313BB /* Line.swift in Sources */,
 				62E22A5B2921337D005313BB /* MLCalculatorApp.swift in Sources */,
+				62E22A6E2921341C005313BB /* CanvasView.swift in Sources */,
+				62E22A7729213831005313BB /* Extensions.swift in Sources */,
+				62E22A7929215B6B005313BB /* CharacterClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +321,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = add;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +360,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = add;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
